@@ -15,6 +15,7 @@ public class Application   {
 
     public static void main(String[] args) {
         System.out.println("测试");
+        System.out.println("测试忽略git提交文件");
         SpringApplication.run(Application.class, args);
     }
 
