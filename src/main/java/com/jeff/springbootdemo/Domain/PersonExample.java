@@ -1,8 +1,11 @@
 package com.jeff.springbootdemo.Domain;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class PersonExample {
     protected String orderByClause;
 

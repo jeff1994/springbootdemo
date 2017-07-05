@@ -24,6 +24,7 @@
         <package name="com.jeff.springbootdemo.Domain"/>
     </typeAliases>
     <mappers>
+        <mapper resource="com\jeff\springbootdemo\Mapper\AccountMapper.xml"/>
         <mapper resource="com\jeff\springbootdemo\Mapper\PersonMapper.xml"/>
     </mappers>
 </configuration>

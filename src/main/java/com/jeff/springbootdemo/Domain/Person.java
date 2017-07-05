@@ -1,5 +1,8 @@
 package com.jeff.springbootdemo.Domain;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Person {
     private Integer id;
 

@@ -1,5 +1,6 @@
 package com.jeff.springbootdemo.Controller;
 
+import com.jeff.springbootdemo.Domain.Person;
 import com.jeff.springbootdemo.Service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

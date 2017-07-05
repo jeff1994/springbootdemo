@@ -5,8 +5,11 @@ import com.jeff.springbootdemo.Domain.PersonExample;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.mybatis.spring.annotation.MapperScan;
 
+@Mapper
 public interface PersonMapper {
     int countByExample(PersonExample example);
 
