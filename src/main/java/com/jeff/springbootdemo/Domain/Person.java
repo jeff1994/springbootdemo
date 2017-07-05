@@ -1,23 +1,19 @@
 package com.jeff.springbootdemo.Domain;
 
-import com.jeff.springbootdemo.Mapper.PersonMapper;
+public class Person {
+    private Integer id;
 
-import java.io.Serializable;
+    private String name;
 
-/**
- * Created by Administrator on 2017/7/2 0002.
- */
-public class Person  implements Serializable {
-    int id;
-    String name;
-    int age;
-    String address;
+    private Integer age;
 
-    public int getId() {
+    private String address;
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -26,14 +22,14 @@ public class Person  implements Serializable {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
@@ -42,16 +38,6 @@ public class Person  implements Serializable {
     }
 
     public void setAddress(String address) {
-        this.address = address;
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", address='" + address + '\'' +
-                '}';
+        this.address = address == null ? null : address.trim();
     }
 }
