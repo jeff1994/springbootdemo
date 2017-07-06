@@ -7,4 +7,6 @@ import com.jeff.springbootdemo.Domain.Person;
  */
 public interface PersonService {
     Person returnPerson(int id);
+
+    public int insertPersonMapper();
 }

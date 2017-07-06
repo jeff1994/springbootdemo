@@ -26,4 +26,15 @@ public class PersonDao {
         // return  this.sqlSession.selectOne("selectPersonById",id);
         return this.PersonMapper.selectByPrimaryKey(id);
     }
+
+    public int insertPersonMapper() {
+        Person person = new Person();
+        person.setName("张三1");
+        person.setAddress("深圳市");
+        person.setAge(1);
+        //  person.setId(2);
+        return this.PersonMapper.insert(person);
+
+
+    }
 }

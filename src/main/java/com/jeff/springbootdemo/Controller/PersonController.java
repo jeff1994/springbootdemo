@@ -28,9 +28,15 @@ public class PersonController {
     }
 
     @RequestMapping("/persontest")
-    Person personTest() {
+    public Person personTest() {
         return personService.returnPerson(1);
     }
+
+    @RequestMapping("insertperson")
+    public int insertperson() {
+        return personService.insertPersonMapper();
+    }
+
 
 }
 

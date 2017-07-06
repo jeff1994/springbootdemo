@@ -100,7 +100,7 @@
             <include refid="Example_Where_Clause"/>
         </if>
     </delete>
-    <insert id="insert" parameterType="com.jeff.springbootdemo.Domain.Person">
+    <insert id="insert" parameterType="com.jeff.springbootdemo.Domain.Person" keyProperty="id" useGeneratedKeys="true">
         insert into person (id, name, age,
         address)
         values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER},

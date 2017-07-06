@@ -18,4 +18,9 @@ public class PersonServiceImp implements PersonService {
     public Person returnPerson(int id) {
         return  personDao.getPersonMapper(id);
     }
+
+    @Override
+    public int insertPersonMapper() {
+        return personDao.insertPersonMapper();
+    }
 }
