@@ -24,12 +24,13 @@ public class PersonController {
 
     @RequestMapping("/")
     String home() {
+        System.out.println("你啊你");
         return "Hello World!";
     }
 
     @RequestMapping("/now")
     String retuenDate() {
-        return "现在时间：" + (new Date()).toLocaleString();
+        return "现在时间：" + new Date();
     }
 
     @RequestMapping("/persontest")

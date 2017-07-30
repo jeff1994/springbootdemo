@@ -16,5 +16,9 @@ springboot 集成mybatis，通过官方mybatis-spring-boot-starter方式（http:
         
         -学习log4j和springboot的结合使用（参照http://blog.didispace.com/springbootlog4j/）
         (后期了解到最新版本的springboot已经不支持log4j1.*版本，支持log4j2,spring boot本身支持logback日志输出,不需要添加依赖)
+  2017/07/30 下午18:09
+       
+       -学习使用spring-boot-devtools中的自动重启的功能（http://www.cnblogs.com/winner-0715/p/6666579.html http://www.cnblogs.com/softidea/archive/2016/09/28/5917629.html）
+       
         
    接下来会学习Springboot对log4j2的支持，druid的知识。
