@@ -21,4 +21,8 @@ springboot 集成mybatis，通过官方mybatis-spring-boot-starter方式（http:
        -学习使用spring-boot-devtools中的自动重启的功能（http://www.cnblogs.com/winner-0715/p/6666579.html http://www.cnblogs.com/softidea/archive/2016/09/28/5917629.html）
        
         
+  2017/08/02 下午18:21
+  
+        -banner的使用、spring-boot-devtools	模块包含一个内嵌的LiveReload服务器，它可以在资源改变时触发浏览器刷新
+   
    接下来会学习Springboot对log4j2的支持，druid的知识。

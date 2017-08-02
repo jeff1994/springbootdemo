@@ -1,13 +1,13 @@
 package com.jeff.springbootdemo;
 
-import jdk.nashorn.internal.runtime.options.LoggingOption;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Created by Administrator on 2017/7/1 0001.
  */
 @SpringBootApplication
+
 public class Application   {
 
 
