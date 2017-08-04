@@ -27,4 +27,11 @@ springboot 集成mybatis，通过官方mybatis-spring-boot-starter方式（http:
   2017/08/02 晚上 23:12 
   
         -学习druid的知识（打开监控画面）
+        
+   2017/08/03 下午16:29 
+      
+        -了解druid的StatFilter、StatViewServlet、WebStatFilter知识
+        -程序链接泄露问题、慢sql检测、数据库密码加密
+        -问题:wallfilter配置不成功、LogFilter与之前配置的logging之间的关系（周五之后解决）
+   
    接下来会学习Springboot对log4j2的支持，druid的知识。
