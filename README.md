@@ -27,4 +27,8 @@ springboot 集成mybatis，通过官方mybatis-spring-boot-starter方式（http:
   2017/08/02 晚上 23:12 
   
         -学习druid的知识（打开监控画面）
+  2017/08/07 晚上23:04
+  
+        -springboot、druid、log4j2的使用（输出到文件不会，希望接下来解决）
    接下来会学习Springboot对log4j2的支持，druid的知识。
+   

@@ -35,6 +35,7 @@ public class PersonController {
 
     @RequestMapping("/persontest")
     public Person personTest() {
+        System.out.println(logger);
         logger.info("测试log4j的使用");
         return personService.returnPerson(1);
     }
