@@ -36,7 +36,9 @@ springboot 集成mybatis，通过官方mybatis-spring-boot-starter方式（http:
 ###2017年10月19日17:31:51
 - 将之前mywebsite项目中（把web中自带的tomcat8去除掉，使用外部的）配置移植过来。
 - 增加mybatis打印查询语句设置
-        
+ 
+###2017年10月19日23:49:45
+- 增加了redis的支持，以及redis的增加和查询demo
  
 
    

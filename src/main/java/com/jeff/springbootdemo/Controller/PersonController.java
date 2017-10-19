@@ -6,10 +6,13 @@ import com.jeff.springbootdemo.Service.PersonService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Administrator on 2017/7/1 0001.
@@ -21,7 +24,8 @@ public class PersonController {
 
     @Autowired
     PersonService personService;
-
+    @Autowired
+    StringRedisTemplate stringRedisTemplate;
     @RequestMapping("/")
     String home() {
         System.out.println("你啊你");
@@ -46,6 +50,29 @@ public class PersonController {
         return personService.insertPersonMapper();
     }
 
+    @RequestMapping("getredisvalue")
+    public String getRedisValue(String key) {
+        String message = stringRedisTemplate.opsForValue().get(key);
+        System.out.println(message);
+        if (message == null) {
+            message = "redis中没有你查找的key";
+        }
+        return message;
+
+    }
+
+    @RequestMapping("setredisvalue")
+    public String setRedisValue(String key, String value) {
+        stringRedisTemplate.opsForValue().set(key, value);
+        String getValue = stringRedisTemplate.opsForValue().get(key);
+        System.out.println(getValue);
+        System.out.println(value);
+        if (value.equals(getValue)) {
+            return "设置成功,key-value值是" + key + "--" + value;
+        } else
+            return "设置失败!";
+
+    }
 
 }
 
