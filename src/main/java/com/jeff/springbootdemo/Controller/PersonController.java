@@ -3,15 +3,20 @@ package com.jeff.springbootdemo.Controller;
 import com.jeff.springbootdemo.Domain.Person;
 import com.jeff.springbootdemo.Service.PersonService;
 
+import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.session.SessionProperties;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -50,29 +55,8 @@ public class PersonController {
         return personService.insertPersonMapper();
     }
 
-    @RequestMapping("getredisvalue")
-    public String getRedisValue(String key) {
-        String message = stringRedisTemplate.opsForValue().get(key);
-        System.out.println(message);
-        if (message == null) {
-            message = "redis中没有你查找的key";
-        }
-        return message;
 
-    }
 
-    @RequestMapping("setredisvalue")
-    public String setRedisValue(String key, String value) {
-        stringRedisTemplate.opsForValue().set(key, value);
-        String getValue = stringRedisTemplate.opsForValue().get(key);
-        System.out.println(getValue);
-        System.out.println(value);
-        if (value.equals(getValue)) {
-            return "设置成功,key-value值是" + key + "--" + value;
-        } else
-            return "设置失败!";
-
-    }
 
 }
 

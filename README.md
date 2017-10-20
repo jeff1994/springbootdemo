@@ -39,6 +39,9 @@ springboot 集成mybatis，通过官方mybatis-spring-boot-starter方式（http:
  
 ###2017年10月19日23:49:45
 - 增加了redis的支持，以及redis的增加和查询demo
+
+###2017年10月20日18:55:58
+- 增加redis对list,set,map,string的练习demo
  
 
    
